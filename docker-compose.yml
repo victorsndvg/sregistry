@@ -3,7 +3,7 @@ db:
 
 uwsgi:
   restart: always
-  image: vanessa/sregistry
+  image: mso4sc/sregistry
   volumes:
     - .:/code
     - ./static:/var/www/static
@@ -34,7 +34,7 @@ redis:
 
 
 worker:
-  image: vanessa/sregistry
+  image: mso4sc/sregistry
   command: celery worker -A shub.celery -Q default -n default@%h -B
   volumes:
     - .:/code
