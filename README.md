@@ -11,7 +11,7 @@ Singularity Registry is a management and storage of Singularity images for an in
 ## Images Included
 Singularity Registry consists of several Docker images, and they are integrated to work together using [docker-compose.yml](docker-compose.yml). The images are the following:
 
- - **vanessa/sregistry**: is the main uwsgi application, which serves a Django (python-based) application.
+ - **mso4sc/sregistry**: is the main uwsgi application, which serves a Django (python-based) application.
  - **nginx**: pronounced (engine-X) is the webserver. The starter application is configured for http, however you should follow the instructions to set up https properly.
  - **worker**: is the same uwsgi image, but with a running command that is specialized to perform tasks. The tasks are run via [celery](http://www.celeryproject.org/), a distributed job queue that fits nicely into Django. The celery worker uses a
  - **redis**: database to organize the jobs themselves.
