@@ -49,10 +49,10 @@ SOCIAL_AUTH_PIPELINE = (
     'social_core.pipeline.user.user_details',
 )
 
-SOCIAL_AUTH_LOGIN_REDIRECT_URL = 'http://127.0.0.1'
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = 'https://sregistry.srv.cesga.es'
 
 # http://psa.matiasaguirre.net/docs/configuration/settings.html#urls-options
-#SOCIAL_AUTH_REDIRECT_IS_HTTPS = True
+SOCIAL_AUTH_REDIRECT_IS_HTTPS = True
 
 #SOCIAL_AUTH_USER_MODEL = 'django.contrib.auth.models.User'
 #SOCIAL_AUTH_STORAGE = 'social.apps.django_app.me.models.DjangoStorage'

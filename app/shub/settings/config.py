@@ -21,10 +21,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 # Which social auths do you want to use?
 ENABLE_GOOGLE_AUTH=False
-ENABLE_TWITTER_AUTH=True
+ENABLE_TWITTER_AUTH=False
 ENABLE_GITHUB_AUTH=False
 ENABLE_GITLAB_AUTH=False
-ENABLE_FIWARE_AUTH=False
+ENABLE_FIWARE_AUTH=True
 
 
 # NOTE you will need to set autehtication methods up.
@@ -35,23 +35,23 @@ ENABLE_FIWARE_AUTH=False
 # See below for additional authentication module, e.g. LDAP that are
 # available, and configured, as plugins.
 
-DOMAIN_NAME = "http://127.0.0.1"
-DOMAIN_NAME_HTTP = "http://127.0.0.1"
+DOMAIN_NAME = "https://sregistry.srv.cesga.es"
+DOMAIN_NAME_HTTP = "http://sregistry.srv.cesga.es"
 DOMAIN_NAKED = DOMAIN_NAME_HTTP.replace('http://','')
 
-ADMINS = (( 'vsochat', 'vsochat@gmail.com'),)
+ADMINS = (( 'vsande', 'vsande@cesga.es'),)
 MANAGERS = ADMINS
 
-HELP_CONTACT_EMAIL = 'vsochat@stanford.edu'
-HELP_INSTITUTION_SITE = 'srcc.stanford.edu'
-REGISTRY_NAME = "Tacosaurus Computing Center"
-REGISTRY_URI = "taco"
+HELP_CONTACT_EMAIL = 'vsande@cesga.es'
+HELP_INSTITUTION_SITE = 'http://www.cesga.es'
+REGISTRY_NAME = "Singularity Registry"
+REGISTRY_URI = "MSO4SC"
 
 # Should registries by default be private, with no option for public?
 PRIVATE_ONLY = False
 
 # Should the default for a new registry be private or public?
-DEFAULT_PRIVATE = False
+DEFAULT_PRIVATE = True
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
@@ -92,5 +92,5 @@ LOGGING_SAVE_RESPONSES=True
 # Available Plugins:
 # - ldap_auth: Allows sregistry to authenitcate against an LDAP directory
 PLUGINS_ENABLED = [
-#    'ldap_auth'
+    'ldap_auth'
 ]
