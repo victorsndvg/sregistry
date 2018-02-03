@@ -20,10 +20,4 @@ cronjob
 
 # Static #
 ##########
-/images
-/static
-/static/css
-/static/images
-/static/js
-/static/favicon.ico
-/static/fonts
+/data
