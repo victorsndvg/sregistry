@@ -19,6 +19,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 '''
 
+# AUTHENTICATION
+
 # Which social auths do you want to use?
 ENABLE_GOOGLE_AUTH=False
 ENABLE_TWITTER_AUTH=False
@@ -53,7 +55,10 @@ PRIVATE_ONLY = False
 # Should the default for a new registry be private or public?
 DEFAULT_PRIVATE = True
 
-# Database
+
+
+# DATABASE
+
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
 DATABASES = {
@@ -66,18 +71,12 @@ DATABASES = {
     }
 }
 
-########################################################################
+
 # Visualizations
-########################################################################
 
 # After how many single containers should we switch to showing collections
 # only? >= 1000
 VISUALIZATION_TREEMAP_COLLECTION_SWITCH=1000
-
-
-########################################################################
-# Logging
-########################################################################
 
 
 # Logging
@@ -88,6 +87,8 @@ LOGGING_SAVE_RESPONSES=True
 
 # Plugins
 # Add the name of a plugin under shub.plugins here to enable it
+
+
 
 # Available Plugins:
 # - ldap_auth: Allows sregistry to authenitcate against an LDAP directory
